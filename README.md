@@ -7,3 +7,16 @@ File processing workflows
 JSON output for downstream systems
 Clean, readable scripting
 DevOps‑style thinking
+
+flowchart TD
+
+    A[Input Folder] --> B[Automation Script]
+    B --> C[Scan Files]
+    C --> D[Count File Types]
+    D --> E[Generate JSON Summary]
+    E --> F[Output to Console]
+
+    B -. triggered by .-> G[GitHub Action]
+    G --> B
+
+How to Extend This Project
